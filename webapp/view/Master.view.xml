@@ -1,0 +1,30 @@
+<mvc:View controllerName="nsNWPC_prjNWProdCatalog.controller.Master"
+    xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Page id="idMasterPage"
+	   title="">
+		<subHeader>
+			<Bar>
+				<contentLeft>
+					<SearchField search="handleSearch" width="100%"></SearchField>
+				</contentLeft>
+			</Bar>
+		</subHeader>
+		<List id="list"
+		  items="{appdata>/Products}" 
+		  noDataText="{i18n>errornodata}"
+		  select="handleListSelect">
+<!--
+			mode="{device>/listMode}"
+-->
+			<ObjectListItem title="{appdata>ProductName}" number="" press="handleListItemPress">
+				<!--
+				type="{device>/listItemType}"
+-->				<attributes>
+					<ObjectAttribute text="{appdata>Category/CategoryName}"/>
+					<ObjectAttribute text="{appdata>Supplier/CompanyName}"/>
+				</attributes>
+			</ObjectListItem>
+		</List>
+		<footer></footer>
+	</Page>
+</mvc:View>

@@ -1,0 +1,11 @@
+<mvc:View controllerName="nsNWPC_prjNWProdCatalog.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<SplitApp initialMaster="idViewMaster" initialDetail="idViewDetail">
+		<masterPages>
+			<mvc:XMLView id="idViewMaster" viewName="nsNWPC_prjNWProdCatalog.view.Master"/>
+		</masterPages>
+		<detailPages>
+			<mvc:XMLView id="idViewDetail" viewName="nsNWPC_prjNWProdCatalog.view.Detail"/>
+		</detailPages>
+	</SplitApp>
+</mvc:View>
