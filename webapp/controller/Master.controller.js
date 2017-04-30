@@ -9,30 +9,31 @@ sap.ui.define([
 			this._oComponent = sap.ui.component(sap.ui.core.Component.getOwnerIdFor(this._oView));
 			var oResourceBundle = this._oComponent.getModel("i18n").getResourceBundle();
 			var oModel = this._oComponent.getModel("appdata");
-			var sMsgToastText;
-
+/*
 			oModel.read("/Products/$count", {
 				async: false,
 				success: jQuery.proxy(function(oData) {
 					var oPage = this._oView.byId("idMasterPage");
 					var sTitle = oResourceBundle.getText("mastertitle", [oData]);
 					oPage.setTitle(sTitle);
-					sMsgToastText = oResourceBundle.getText("datafound");
-					sap.m.MessageToast.show(sMsgToastText);
 				}, this),
 				error: jQuery.proxy(function() {
-					sMsgToastText = oResourceBundle.getText("errornodata");
-					sap.m.MessageToast.show(sMsgToastText);
+					//logic for error handling
 				}, this)
 			});
+*/
+/*
+		var sMsgToastText = oResourceBundle.getText("datafound");
+		sMsgToastText = oResourceBundle.getText("errornodata");
+		sap.m.MessageToast.show(sMsgToastText);
+*/
 		},
-		handleListItemPress: function(evt) {
+		handleobjlistitemPress: function(evt) {
 			var context = evt.getSource().getBindingContext("appdata");
-			this.nav.to("Detail", context);
+			//this._oComponent.nav.to("Detail", context);
 		},
 
-		handleSearch: function(evt) {
-
+		handleidSearchFieldSearch: function(evt) {
 			// create model filter
 			var filters = [];
 			var query = evt.getParameter("query");
@@ -42,15 +43,27 @@ sap.ui.define([
 			}
 
 			// update list binding
-			var list = this.getView().byId("list");
+			var list = this.getView().byId("idList");
 			var binding = list.getBinding("items");
 			binding.filter(filters);
 		},
 
-		handleListSelect: function(evt) {
+		handleidlistselectionChange: function(evt) {
 			var context = evt.getParameter("listItem").getBindingContext("appdata");
-			this.nav.to("Detail", context);
+			this._oView = this.getView();
+			var oXMLMaster = this._oView.getParent();
+			var oSplitApp = oXMLMaster.getParent();
+			var oMainView = oSplitApp.getParent();
+			var mynav = oMainView.getController();
+			mynav.to("Detail", context);
+		},
+		handleidlistitemPress:function(evt){
+			console.log("handleidlistitemPress");
+		},
+		handleobjlistitemdetailPress:function(evt){
+			console.log("handleobjlistitemdetailPress");
 		}
+		
 
 	});
 });

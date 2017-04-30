@@ -5,18 +5,24 @@
 		<subHeader>
 			<Bar>
 				<contentLeft>
-					<SearchField search="handleSearch" width="100%"></SearchField>
+					<SearchField id="idSearchField" search="handleidSearchFieldSearch" width="100%"></SearchField>
 				</contentLeft>
 			</Bar>
 		</subHeader>
-		<List id="list"
+		<List id="idList"
+		  mode="SingleSelectMaster"
 		  items="{appdata>/Products}" 
 		  noDataText="{i18n>errornodata}"
-		  select="handleListSelect">
+		  selectionChange="handleidlistselectionChange">
+
 <!--
 			mode="{device>/listMode}"
+		    itemPress="handleidlistitemPress"			
 -->
-			<ObjectListItem title="{appdata>ProductName}" number="" press="handleListItemPress">
+			<ObjectListItem title="{appdata>ProductName}"
+			  type="Active"
+			  number=""
+			  press="handleobjlistitemPress">
 				<!--
 				type="{device>/listItemType}"
 -->				<attributes>

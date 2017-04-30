@@ -40,23 +40,6 @@ sap.ui.define([
 			if (this._routeMatchedHandler) {
 				this._routeMatchedHandler.setCloseDialogs(bCloseDialogs);
 			}
-		},
-
-		// creation and setup of the oData model
-		_initODataModel: function(sServiceUrl) {
-			//		jQuery.sap.require("ns_prdcatalog.util.messages");
-			var oConfig = {
-				metadataUrlParams: {},
-				json: true,
-				// loadMetadataAsync : true,
-				defaultBindingMode: "TwoWay",
-				defaultCountMode: "Inline",
-				useBatch: true
-			};
-			var oModel = new sap.ui.model.odata.v2.ODataModel(sServiceUrl, oConfig);
-			//		oModel.attachRequestFailed(null, ns_prdcatalog.util.messages.showErrorMessage);
-			this.setModel(oModel);
 		}
-
 	});
 });

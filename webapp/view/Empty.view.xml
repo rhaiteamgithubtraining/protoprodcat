@@ -1,0 +1,9 @@
+<core:View 
+   xmlns:core="sap.ui.core"
+   xmlns:form="sap.ui.layout.form"
+   xmlns="sap.m">
+   <Page class="sapUiFioriObjectPage"
+   title="{i18n>detailtitle}">
+	<footer></footer>
+	</Page>
+</core:View>

@@ -83,7 +83,7 @@
 				}
 			},
 			"appdata": {
-				"dataSource": "onlinedata",
+				"dataSource": "offlinedata",
 				"settings": {
 					"useBatch":false,
 					"serviceUrlParams" : "$expand=Category,Supplier",
