@@ -5,6 +5,10 @@ sap.ui.define([
 	"use strict";
 	return Controller.extend("nsNWPC_prjNWProdCatalog.controller.Detail", {
 <<<<<<< Upstream, based on c407b5757dc29645381f1b7e6c1adfaaf872846b
+<<<<<<< Upstream, based on c407b5757dc29645381f1b7e6c1adfaaf872846b
+=======
+<<<<<<< Upstream, based on 9b6a0fdee99869fa5f36e96ace4c97f9f1c20a79
+>>>>>>> 71de320 Sandbox Entries; not working as of 10:30PM 30Apr2017.
 		formatter : formatter,
 		handleNavButtonPress: function(evt) {
 				this._oView = this.getView();
