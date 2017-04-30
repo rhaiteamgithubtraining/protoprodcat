@@ -76,6 +76,15 @@ sap.ui.define([
 			var oMainView = oSplitApp.getParent();
 			var app = oMainView.getController();
 			app.navtoDetail("Detail", context);
+<<<<<<< Upstream, based on c407b5757dc29645381f1b7e6c1adfaaf872846b
+=======
+		},
+		handleidlistitemPress:function(evt){
+			//console.log("handleidlistitemPress");
+		},
+		handleobjlistitemdetailPress:function(evt){
+			//console.log("handleobjlistitemdetailPress");
+>>>>>>> 8292bfe Sandbox Entries; not working as of 10:30PM 30Apr2017.
 		}
 
 	});

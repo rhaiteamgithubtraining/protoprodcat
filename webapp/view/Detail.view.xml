@@ -1,3 +1,4 @@
+<<<<<<< Upstream, based on c407b5757dc29645381f1b7e6c1adfaaf872846b
 <core:View controllerName="nsNWPC_prjNWProdCatalog.controller.Detail"
 		   xmlns:core="sap.ui.core"
 		   xmlns:form="sap.ui.layout.form"
@@ -9,6 +10,18 @@
 		  title="{i18n>detailtitle}">
 		<ObjectHeader number="{appdata>Category/CategoryName}"
 					  title="{appdata>ProductName}">
+=======
+<core:View 
+   controllerName="nsNWPC_prjNWProdCatalog.controller.Detail"
+   xmlns:core="sap.ui.core"
+   xmlns:form="sap.ui.layout.form"
+   xmlns="sap.m">
+   <Page id="idPage" class="sapUiFioriObjectPage"
+   navButtonPress="handleNavButtonPress"
+   showNavButton="false"
+   title="{i18n>detailtitle}">
+		<ObjectHeader number="{appdata>Category/CategoryName}" title="{appdata>ProductName}">
+>>>>>>> 8292bfe Sandbox Entries; not working as of 10:30PM 30Apr2017.
 			<attributes>
 				<ObjectAttribute text="{appdata>Supplier/CompanyName}"/>
 			</attributes>
