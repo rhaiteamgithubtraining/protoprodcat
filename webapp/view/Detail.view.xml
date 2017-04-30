@@ -31,7 +31,7 @@
 						<Label text="{i18n>isdiscontinued}"/>
 						<Text text="{
 						  path: 'appdata>Discontinued',
-					      formatter: 'nsNWPC_prjNWProdCatalog.controller.setActiveorNot'
+					      formatter: '.formatter.setYesorNo'
 					      }"/>
 					</form:SimpleForm>
 				</IconTabFilter>
@@ -60,7 +60,7 @@
 						<Label text="{i18n>suppregion}"/>
 						<Text text="{
 						  path: 'appdata>Supplier/Region',
-					      formatter: 'nsNWPC_prjNWProdCatalog.controller.showNA'
+					      formatter: '.formatter.showNA'
 					      }"/>
 						<Label text="{i18n>supppostcode}"/>
 						<Text text="{appdata>Supplier/PostalCode}"/>
@@ -69,17 +69,17 @@
 						<Label text="{i18n>suppphone}"/>
 						<Text text="{
 						  path: 'appdata>Supplier/Phone',
-					      formatter: 'nsNWPC_prjNWProdCatalog.controller.showNA'
+					      formatter: '.formatter.showNA'
 					      }"/>
 						<Label text="{i18n>suppfax}"/>
 						<Text text="{
 						  path: 'appdata>Supplier/Fax',
-					      formatter: 'nsNWPC_prjNWProdCatalog.controller.showNA'
+					      formatter: '.formatter.showNA'
 					      }"/>
 						<Label text="{i18n>suppweb}"/>
 						<Text text="{
 						  path: 'appdata>Supplier/HomePage',
-					      formatter: 'nsNWPC_prjNWProdCatalog.controller.showNA'
+					      formatter: '.formatter.showNA'
 					      }"/>
 					</form:SimpleForm>
 				</IconTabFilter>

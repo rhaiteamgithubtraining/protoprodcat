@@ -1,17 +1,19 @@
 sap.ui.define([], function() {
 	"use strict";
 	return {
-		setActiveorNot: function(value) {
+		setYesorNo: function(value) {
+			var oresourceBundle = this.getView().getModel("i18n").getResourceBundle();
 			if (value) {
-				return "Active";
+				return oresourceBundle.getText("yes");
 			} else {
-				return "Discontinued";
+				return oresourceBundle.getText("no");
 			}
 		},
 		showNA : function(value) {
+			var oresourceBundle = this.getView().getModel("i18n").getResourceBundle();
 			if (value === null) 
 			{
-				return "N/A";
+				return oresourceBundle.getText("NA");
 			}
 			else
 			{
