@@ -58,10 +58,10 @@ sap.ui.define([
 			mynav.to("Detail", context);
 		},
 		handleidlistitemPress:function(evt){
-			console.log("handleidlistitemPress");
+			//console.log("handleidlistitemPress");
 		},
 		handleobjlistitemdetailPress:function(evt){
-			console.log("handleobjlistitemdetailPress");
+			//console.log("handleobjlistitemdetailPress");
 		}
 		
 

@@ -8,7 +8,7 @@ sap.ui.define([
 
 			var app = this.getView().byId("idsplitapp");
 			var idDestPage = "idView" + pageId;
-            var sDestPageId = this.getView().byId(idDestPage).sId;
+            var sDestPageId = this.getView().byId(idDestPage).getId();
 			var page= app.getDetailPage(sDestPageId);
 /*
 			var master = ("Master" === pageId);
@@ -27,7 +27,6 @@ sap.ui.define([
             app.to(sDestPageId);
 			if (context) {
 				page.setBindingContext(context);
-				console.log(context);
 			}
             		
 		},
@@ -35,7 +34,7 @@ sap.ui.define([
 		back: function(pageId) {
 			var app = this.getView().byId("idsplitapp");
 			var idDestPage = "idView" + pageId;
-            var sDestPageId = this.getView().byId(idDestPage).sId;
+            var sDestPageId = this.getView().byId(idDestPage).getId;
             app.backToPage(sDestPageId);
 		}
 

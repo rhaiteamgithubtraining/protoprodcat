@@ -2,9 +2,8 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller"
 ], function(Controller) {
 	"use strict";
-
 	return Controller.extend("nsNWPC_prjNWProdCatalog.controller.Detail", {
-		onInit: function() {},
+	onInit: function() {},
 		handleNavButtonPress: function(evt) {
 			this._oView = this.getView();
 			var oXMLDetail = this._oView.getParent();
@@ -13,11 +12,10 @@ sap.ui.define([
 			var mynav = oMainView.getController();
 			mynav.back("Master");
 		},
-
 		onBeforeRendering: function() {
 
-//			this.byId("idPage").bindElement("Products");
-//			this.byId("MaintenanceStatus").bindElement("MaintenanceRec");
+			//			this.byId("idPage").bindElement("Products");
+			//			this.byId("MaintenanceStatus").bindElement("MaintenanceRec");
 
 		}
 
