@@ -19,17 +19,20 @@
 					  minWidth="1024">
 						<core:Title text="{i18n>sectionproddet}"/>
 						<Label text="{i18n>qtyperunit}"/>
-						<Text text="Qty per Unit"/>
+						<Text text="{appdata>QuantityPerUnit}"/>
 						<Label text="{i18n>unitprice}"/>
-						<Text text="Unit Price"/>
+						<Text text="{appdata>UnitPrice}"/>
 						<Label text="{i18n>unitinstock}"/>
-						<Text text="Unit in Stock"/>
+						<Text text="{appdata>UnitsInStock}"/>
 						<Label text="{i18n>unitsonorder}"/>
-						<Text text="Units on Order"/>
+						<Text text="{appdata>UnitsOnOrder}"/>
 						<Label text="{i18n>reorderlevel}"/>
-						<Text text="Reorder Level"/>
+						<Text text="{appdata>ReorderLevel}"/>
 						<Label text="{i18n>isdiscontinued}"/>
-						<Text text="If discontinued"/>
+						<Text text="{
+						  path: 'appdata>Discontinued',
+					      formatter: 'nsNWPC_prjNWProdCatalog.controller.setActiveorNot'
+					      }"/>
 					</form:SimpleForm>
 				</IconTabFilter>
 				<IconTabFilter icon="sap-icon://e-care">
@@ -37,9 +40,9 @@
 					  minWidth="1024">
 						<core:Title text="{i18n>sectionprodcateg}"/>
 						<Label text="{i18n>categdesc}"/>
-						<Text text="Category Descr"/>
+						<Text text="{appdata>Category/Description}"/>
 						<Label text="{i18n>categpict}"/>
-						<Text text="will be image"/>
+						<Text text="To Follow"/>
 					</form:SimpleForm>
 				</IconTabFilter>
 				<IconTabFilter icon="sap-icon://shipping-status">
@@ -47,25 +50,37 @@
 					  minWidth="1024">
 						<core:Title text="{i18n>sectionprodsupp}"/>
 						<Label text="{i18n>contactname}"/>
-						<Text text="Contact Name"/>
+						<Text text="{appdata>Supplier/ContactName}"/>
 						<Label text="{i18n>contacttitle}"/>
-						<Text text="Contact Title"/>
+						<Text text="{appdata>Supplier/ContactTitle}"/>
 						<Label text="{i18n>suppaddress}"/>
-						<Text text="Supplier Address"/>
+						<Text text="{appdata>Supplier/Address}"/>
 						<Label text="{i18n>suppcity}"/>
-						<Text text="Supplier City"/>
+						<Text text="{appdata>Supplier/City}"/>
 						<Label text="{i18n>suppregion}"/>
-						<Text text="Supplier Region"/>
+						<Text text="{
+						  path: 'appdata>Supplier/Region',
+					      formatter: 'nsNWPC_prjNWProdCatalog.controller.showNA'
+					      }"/>
 						<Label text="{i18n>supppostcode}"/>
-						<Text text="Supplier PostCode"/>
+						<Text text="{appdata>Supplier/PostalCode}"/>
 						<Label text="{i18n>suppcountry}"/>
-						<Text text="Supplier Country"/>
+						<Text text="{appdata>Supplier/Country}"/>
 						<Label text="{i18n>suppphone}"/>
-						<Text text="Phone Num"/>
+						<Text text="{
+						  path: 'appdata>Supplier/Phone',
+					      formatter: 'nsNWPC_prjNWProdCatalog.controller.showNA'
+					      }"/>
 						<Label text="{i18n>suppfax}"/>
-						<Text text="Fax Num"/>
+						<Text text="{
+						  path: 'appdata>Supplier/Fax',
+					      formatter: 'nsNWPC_prjNWProdCatalog.controller.showNA'
+					      }"/>
 						<Label text="{i18n>suppweb}"/>
-						<Text text="website"/>
+						<Text text="{
+						  path: 'appdata>Supplier/HomePage',
+					      formatter: 'nsNWPC_prjNWProdCatalog.controller.showNA'
+					      }"/>
 					</form:SimpleForm>
 				</IconTabFilter>
 			</items>

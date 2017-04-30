@@ -8,9 +8,8 @@ sap.ui.define([
 			var app = this.getView().byId("idsplitapp");
 			var idDestPage = "idView" + viewName;
             var sDestPageId = this.getView().byId(idDestPage).getId();
-			console.log(sDestPageId);
 			var page = app.getDetailPage(sDestPageId);
-			if (context) page.setBindingContext(context);
+			if (context) page.setBindingContext(context,"appdata");
             app.to(sDestPageId);
 		},
 
