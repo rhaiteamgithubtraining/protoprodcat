@@ -6,7 +6,6 @@
 		</masterPages>
 		<detailPages>
 			<mvc:XMLView id="idViewEmpty" viewName="nsNWPC_prjNWProdCatalog.view.Empty"/>
-			<mvc:XMLView id="idViewDetail" viewName="nsNWPC_prjNWProdCatalog.view.Detail"/>
 		</detailPages>
 	</SplitApp>
 </mvc:View>

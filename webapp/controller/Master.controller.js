@@ -54,8 +54,8 @@ sap.ui.define([
 			var oXMLMaster = this._oView.getParent();
 			var oSplitApp = oXMLMaster.getParent();
 			var oMainView = oSplitApp.getParent();
-			var mynav = oMainView.getController();
-			mynav.to("Detail", context);
+			var app = oMainView.getController();
+			app.navtoDetail("Detail", context);
 		},
 		handleidlistitemPress:function(evt){
 			//console.log("handleidlistitemPress");
