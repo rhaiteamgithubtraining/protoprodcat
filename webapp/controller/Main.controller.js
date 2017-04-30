@@ -27,7 +27,6 @@ sap.ui.define([
             app.to(sDestPageId);
 			if (context) {
 				page.setBindingContext(context);
-				console.log(context);
 			}
             		
 		},

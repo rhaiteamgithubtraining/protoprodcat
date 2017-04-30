@@ -16,8 +16,8 @@ sap.ui.define([
 
 		onBeforeRendering: function() {
 
-//			this.byId("idPage").bindElement("Products");
-//			this.byId("MaintenanceStatus").bindElement("MaintenanceRec");
+			//			this.byId("idPage").bindElement("Products");
+			//			this.byId("MaintenanceStatus").bindElement("MaintenanceRec");
 
 		}
 
