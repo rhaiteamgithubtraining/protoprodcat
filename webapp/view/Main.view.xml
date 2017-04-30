@@ -11,10 +11,14 @@
 						 viewName="nsNWPC_prjNWProdCatalog.view.Master"/>
 		</masterPages>
 		<detailPages>
+<<<<<<< Upstream, based on 9b6a0fdee99869fa5f36e96ace4c97f9f1c20a79
 			<mvc:XMLView id="idViewEmpty"
 						 viewName="nsNWPC_prjNWProdCatalog.view.Empty"/>
 			<mvc:XMLView id="idViewDetail"
 						 viewName="nsNWPC_prjNWProdCatalog.view.Detail"/>
+=======
+			<mvc:XMLView id="idViewEmpty" viewName="nsNWPC_prjNWProdCatalog.view.Empty"/>
+>>>>>>> 8292bfe Sandbox Entries; not working as of 10:30PM 30Apr2017.
 		</detailPages>
 	</SplitApp>
 </mvc:View>
