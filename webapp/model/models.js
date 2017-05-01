@@ -5,7 +5,11 @@ sap.ui.define([
 	"use strict";
 
 	return {
-
+		/** Device model details help
+		 * setup certain xml tags accordingly;
+		 * behavior of screen can be customized also
+		 * accordingly
+		 */
 		createDeviceModel: function() {
 			var oDevModel = new JSONModel(Device);
 			oDevModel.setData({

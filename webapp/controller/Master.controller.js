@@ -4,6 +4,7 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("nsNWPC_prjNWProdCatalog.controller.Master", {
+		//lifecycle standard hook onInit()
 		onInit: function() {
 			this._oView = this.getView();
 			this._oComponent = sap.ui.component(sap.ui.core.Component.getOwnerIdFor(this._oView));
@@ -20,7 +21,7 @@ sap.ui.define([
 						if (oData === "0") {
 							var oList = this._oView.byId("idList");
 							var sNoDataTxt = oResourceBundle.getText("errornodata");
-							oList.setNoDataText("Zero Data: " + sNoDataTxt);
+							oList.setNoDataText(sNoDataTxt);
 						}
 					}, this),
 					error: jQuery.proxy(function(oError) {
@@ -39,7 +40,6 @@ sap.ui.define([
 				oPage.setTitle(sTitle);
 			}
 		},
-		messageme:function(){ sap.m.messageToast("error");},
 		handleobjlistitemPress: function(evt) {
 			this.displayDetail(evt, 2);
 		},

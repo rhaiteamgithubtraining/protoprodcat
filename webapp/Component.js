@@ -8,11 +8,13 @@ sap.ui.define([
 	return UIComponent.extend("nsNWPC_prjNWProdCatalog.Component", {
 
 		metadata: {
+			//declaration of the manifest usage
 			manifest: "json"
 		},
 
 		/**
-		 * The component is initialized by UI5 automatically during the startup of the app and calls the init method once.
+		 * The component is initialized by UI5 automatically during 
+		 * the startup of the app and calls the init method once.
 		 * @public
 		 * @override
 		 */
