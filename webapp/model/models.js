@@ -8,7 +8,16 @@ sap.ui.define([
 
 		createDeviceModel: function() {
 			var oDevModel = new JSONModel(Device);
+			console.log(oDevModel);
+/*
+			oDevModel
+					var deviceModel = new sap.ui.model.json.JSONModel({
+			isPhone : sap.ui.Device.system.phone,
+			listMode : (sap.ui.Device.system.phone) ? "None" : "SingleSelectMaster",
+			listItemType : (sap.ui.Device.system.phone) ? "Active" : "Inactive"
+*/
 			oDevModel.setDefaultBindingMode("OneWay");
+			
 			return oDevModel;
 		}
 		
