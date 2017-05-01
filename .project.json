@@ -6,7 +6,8 @@
   "build": {
     "targetFolder": "dist",
     "sourceFolder": "webapp",
-    "buildRequired": true
+    "buildRequired": true,
+    "lastBuildDateTime": "Mon, 01 May 2017 07:44:29 GMT"
   },
   "generation": [
     {
@@ -38,5 +39,10 @@
     "notifyBeforePushLevel": "Error",
     "blockPush": false,
     "blockPushLevel": "Error"
+  },
+  "hcpdeploy": {
+    "account": "s0010677159trial",
+    "name": "productscatalog",
+    "lastVersionWeTriedToDeploy": "1.0.0"
   }
 }

@@ -1,31 +1,29 @@
 <mvc:View controllerName="nsNWPC_prjNWProdCatalog.controller.Master"
-    xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+		  xmlns:html="http://www.w3.org/1999/xhtml"
+		  xmlns:mvc="sap.ui.core.mvc"
+		  displayBlock="true"
+		  xmlns="sap.m">
 	<Page id="idMasterPage"
-	   title="">
+	      title="">
 		<subHeader>
 			<Bar>
 				<contentLeft>
-					<SearchField id="idSearchField" search="handleidSearchFieldSearch" width="100%"></SearchField>
+					<SearchField id="idSearchField"
+								 search="handleidSearchFieldSearch"
+								 width="100%"></SearchField>
 				</contentLeft>
 			</Bar>
 		</subHeader>
 		<List id="idList"
-		  mode="SingleSelectMaster"
-		  items="{appdata>/Products}" 
-		  noDataText="{i18n>errornodata}"
-		  selectionChange="handleidlistselectionChange">
-
-<!--
-			mode="{device>/listMode}"
-		    itemPress="handleidlistitemPress"			
--->
+			  mode="{device>/listMode}"
+			  items="{appdata>/Products}"
+			  noDataText=""
+			  selectionChange="handleidlistselectionChange">
 			<ObjectListItem title="{appdata>ProductName}"
-			  type="Active"
-			  number=""
-			  press="handleobjlistitemPress">
-				<!--
-				type="{device>/listItemType}"
--->				<attributes>
+							type="{device>/listItemType}"
+							number=""
+							press="handleobjlistitemPress">
+				<attributes>
 					<ObjectAttribute text="{appdata>Category/CategoryName}"/>
 					<ObjectAttribute text="{appdata>Supplier/CompanyName}"/>
 				</attributes>

@@ -1,12 +1,14 @@
-<core:View 
-   xmlns:core="sap.ui.core"
-   xmlns:form="sap.ui.layout.form"
-   xmlns="sap.m">
-   <Page id="idPage" class="sapUiFioriObjectPage"
-   navButtonPress="handleNavButtonPress"
-   showNavButton="false"
-   title="{i18n>detailtitle}">
-		<ObjectHeader number="{appdata>Category/CategoryName}" title="{appdata>ProductName}">
+<core:View controllerName="nsNWPC_prjNWProdCatalog.controller.Detail"
+		   xmlns:core="sap.ui.core"
+		   xmlns:form="sap.ui.layout.form"
+		   xmlns="sap.m">
+	<Page id="idPage"
+		  class="sapUiFioriObjectPage"
+		  navButtonPress="handleNavButtonPress"
+		  showNavButton="{device>/isPhone}"
+		  title="{i18n>detailtitle}">
+		<ObjectHeader number="{appdata>Category/CategoryName}"
+					  title="{appdata>ProductName}">
 			<attributes>
 				<ObjectAttribute text="{appdata>Supplier/CompanyName}"/>
 			</attributes>
@@ -15,56 +17,93 @@
 			<items>
 				<IconTabFilter icon="sap-icon://database">
 					<form:SimpleForm id="Product"
-					  minWidth="1024">
+									 minWidth="1024">
 						<core:Title text="{i18n>sectionproddet}"/>
 						<Label text="{i18n>qtyperunit}"/>
-						<Text text="Qty per Unit"/>
+						<Text text="{appdata>QuantityPerUnit}"/>
 						<Label text="{i18n>unitprice}"/>
-						<Text text="Unit Price"/>
+						<Text text="{appdata>UnitPrice}"/>
 						<Label text="{i18n>unitinstock}"/>
-						<Text text="Unit in Stock"/>
+						<Text text="{appdata>UnitsInStock}"/>
 						<Label text="{i18n>unitsonorder}"/>
-						<Text text="Units on Order"/>
+						<Text text="{appdata>UnitsOnOrder}"/>
 						<Label text="{i18n>reorderlevel}"/>
-						<Text text="Reorder Level"/>
+						<Text text="{appdata>ReorderLevel}"/>
 						<Label text="{i18n>isdiscontinued}"/>
-						<Text text="If discontinued"/>
+						<Text text="{
+									  path: 'appdata>Discontinued',
+									  formatter: '.formatter.setYesorNo'
+									}"/>
 					</form:SimpleForm>
 				</IconTabFilter>
 				<IconTabFilter icon="sap-icon://e-care">
 					<form:SimpleForm id="Category"
-					  minWidth="1024">
+									 minWidth="1024">
 						<core:Title text="{i18n>sectionprodcateg}"/>
 						<Label text="{i18n>categdesc}"/>
-						<Text text="Category Descr"/>
+						<Text text="{appdata>Category/Description}"/>
 						<Label text="{i18n>categpict}"/>
-						<Text text="will be image"/>
+						<Image src="{ 
+									  path: 'appdata>Category/Picture',
+									  formatter: '.formatter.setbase64'
+									}"
+							   width="50%"
+							   height="50%"
+							   alt="{i18n>noimagefound}"></Image>
 					</form:SimpleForm>
 				</IconTabFilter>
 				<IconTabFilter icon="sap-icon://shipping-status">
 					<form:SimpleForm id="Supplier"
-					  minWidth="1024">
+									 minWidth="1024">
 						<core:Title text="{i18n>sectionprodsupp}"/>
 						<Label text="{i18n>contactname}"/>
-						<Text text="Contact Name"/>
+						<Text text="{appdata>Supplier/ContactName}"/>
 						<Label text="{i18n>contacttitle}"/>
-						<Text text="Contact Title"/>
+						<Text text="{appdata>Supplier/ContactTitle}"/>
 						<Label text="{i18n>suppaddress}"/>
-						<Text text="Supplier Address"/>
+						<Text text="{appdata>Supplier/Address}"/>
 						<Label text="{i18n>suppcity}"/>
-						<Text text="Supplier City"/>
-						<Label text="{i18n>suppregion}"/>
-						<Text text="Supplier Region"/>
+						<Text text="{appdata>Supplier/City}"/>
+						<Label text="{i18n>suppregion}"
+							   visible="{ 
+										  path: 'appdata>Supplier/Region',
+										  formatter: '.formatter.displaystate'
+										}"/>
+						<Text text="{appdata>Supplier/Region}"
+							  visible="{ 
+										 path: 'appdata>Supplier/Region',
+										 formatter: '.formatter.displaystate'
+									   }"/>
 						<Label text="{i18n>supppostcode}"/>
-						<Text text="Supplier PostCode"/>
+						<Text text="{appdata>Supplier/PostalCode}"/>
 						<Label text="{i18n>suppcountry}"/>
-						<Text text="Supplier Country"/>
-						<Label text="{i18n>suppphone}"/>
-						<Text text="Phone Num"/>
+						<Text text="{appdata>Supplier/Country}"/>
+						<Label text="{i18n>suppphone}"
+							   visible="{ 
+										  path: 'appdata>Supplier/Phone',
+										  formatter: '.formatter.displaystate'
+										}"/>
+						<Text text="{appdata>Supplier/Phone}"
+							  visible="{
+										 path: 'appdata>Supplier/Phone',
+										 formatter: '.formatter.displaystate'
+									   }"/>
 						<Label text="{i18n>suppfax}"/>
-						<Text text="Fax Num"/>
-						<Label text="{i18n>suppweb}"/>
-						<Text text="website"/>
+						<Text text="{appdata>Supplier/Fax}"
+							  visible="{
+										 path: 'appdata>Supplier/Fax',
+										 formatter: '.formatter.displaystate'
+									   }"/>
+						<Label text="{i18n>suppweb}"
+							   visible="{
+										  path: 'appdata>Supplier/HomePage',
+										  formatter: '.formatter.displaystate'
+										}" />
+						<Text text="{appdata>Supplier/HomePage}"
+							  visible="{
+										 path: 'appdata>Supplier/HomePage',
+										 formatter: '.formatter.displaystate'
+									   }"/>
 					</form:SimpleForm>
 				</IconTabFilter>
 			</items>
