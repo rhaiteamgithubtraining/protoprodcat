@@ -9,6 +9,8 @@ sap.ui.define([
 			this._oComponent = sap.ui.component(sap.ui.core.Component.getOwnerIdFor(this._oView));
 			var oResourceBundle = this._oComponent.getModel("i18n").getResourceBundle();
 			var oModel = this._oComponent.getModel("appdata");
+			
+			console.log(oModel);
 /*
 			oModel.read("/Products/$count", {
 				async: false,

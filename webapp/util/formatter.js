@@ -1,23 +1,24 @@
 sap.ui.define([], function() {
 	"use strict";
 	return {
-		setActiveorNot: function(value) {
-			if (value) {
-				return "Active";
-			} else {
-				return "Discontinued";
-			}
+		setYesorNo : function(value) {
+			var oresourceBundle = this.getView().getModel("i18n").getResourceBundle();
+			if (value) return oresourceBundle.getText("yes");
+			else return oresourceBundle.getText("no");
 		},
 		showNA : function(value) {
-			if (value === null) 
+			var oresourceBundle = this.getView().getModel("i18n").getResourceBundle();
+			if (value === null) return oresourceBundle.getText("NA");
+			else return value;
+		},
+		setbase64 : function(value){
+			if (value !== null)
 			{
-				return "N/A";
+				var imgsrc = "data:image/bmp;base64," + value.substr(104);
+				return imgsrc;
 			}
 			else
-			{
 				return value;
-			}
-			 
 		}
 	};
 });
