@@ -76,6 +76,15 @@ sap.ui.define([
 			var oMainView = oSplitApp.getParent();
 			var app = oMainView.getController();
 			app.navtoDetail("Detail", context);
+<<<<<<< HEAD
+=======
+		},
+		handleidlistitemPress:function(evt){
+			//console.log("handleidlistitemPress");
+		},
+		handleobjlistitemdetailPress:function(evt){
+			//console.log("handleobjlistitemdetailPress");
+>>>>>>> 8292bfe2ddbbe1125c1b3ebbff8717aa9887bf8d
 		}
 
 	});

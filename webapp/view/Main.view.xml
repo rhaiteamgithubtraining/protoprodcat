@@ -18,7 +18,10 @@
 						 viewName="nsNWPC_prjNWProdCatalog.view.Detail"/>
 =======
 			<mvc:XMLView id="idViewEmpty" viewName="nsNWPC_prjNWProdCatalog.view.Empty"/>
+<<<<<<< HEAD
 >>>>>>> 8292bfe Sandbox Entries; not working as of 10:30PM 30Apr2017.
+=======
+>>>>>>> 8292bfe2ddbbe1125c1b3ebbff8717aa9887bf8d
 		</detailPages>
 	</SplitApp>
 </mvc:View>

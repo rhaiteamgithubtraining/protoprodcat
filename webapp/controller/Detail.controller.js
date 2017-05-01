@@ -4,6 +4,7 @@ sap.ui.define([
 ], function(Controller,formatter) {
 	"use strict";
 	return Controller.extend("nsNWPC_prjNWProdCatalog.controller.Detail", {
+<<<<<<< HEAD
 <<<<<<< Upstream, based on 9b6a0fdee99869fa5f36e96ace4c97f9f1c20a79
 		formatter : formatter,
 		handleNavButtonPress: function(evt) {
@@ -15,6 +16,8 @@ sap.ui.define([
 				mynav.back("Master");
 			}
 =======
+=======
+>>>>>>> 8292bfe2ddbbe1125c1b3ebbff8717aa9887bf8d
 		onInit: function() {
 		},
 		onBeforeRendering: function() {
