@@ -31,7 +31,6 @@
 			"name": "Northwind"
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -50,10 +49,8 @@
 		"supportedThemes": [
 			"sap_hcb",
 			"sap_belize"
-
 		]
 	},
-
 	"sap.ui5": {
 		"rootView": {
 			"viewName": "nsNWPC_prjNWProdCatalog.view.Main",
@@ -83,22 +80,30 @@
 				}
 			},
 			"appdata": {
-				"dataSource": "offlinedata",
+				"dataSource": "onlinedata",
 				"settings": {
-					"useBatch":false,
-					"serviceUrlParams" : "$expand=Category,Supplier",
+					"useBatch": false,
+					"serviceUrlParams": "$expand=Category,Supplier",
 					"defaultBindingMode": "TwoWay"
 				}
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		}
 	},
-	"sap.fiori" : {
-		"registrationIds" : [ "00001" ],
-		"archeType" : "transactional"
+	"sap.fiori": {
+		"registrationIds": [
+			"00001"
+		],
+		"archeType": "transactional"
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
 	}
 }

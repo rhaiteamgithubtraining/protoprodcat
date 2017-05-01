@@ -22,24 +22,6 @@ sap.ui.define([
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
-			/*			var usemock = true; 
-						this.setModel(models.createDataModel(usemock));*/
-
-			// initialize router and navigate to the first page
-			//this.getRouter().initialize();
-
-		},
-
-		exit: function() {
-			this._routeMatchedHandler.destroy();
-		},
-
-		// This method lets the app can decide if a navigation closes all open dialogs
-		setRouterSetCloseDialogs: function(bCloseDialogs) {
-			this._bRouterCloseDialogs = bCloseDialogs;
-			if (this._routeMatchedHandler) {
-				this._routeMatchedHandler.setCloseDialogs(bCloseDialogs);
-			}
 		}
 	});
 });
